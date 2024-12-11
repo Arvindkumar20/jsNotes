@@ -141,9 +141,9 @@
 //         name:"ram",
 //         class:"c"
 //     }
-    
 
-    
+
+
 // ];
 // let user={
 //     name:"new",
@@ -156,7 +156,110 @@
 // let a2=[...arr,6,7,8,9];
 // console.log(a2);
 //  let arr=[2,1,7,8,4];
-let arr=['c','y','a','g']
- console.log(arr.sort())
+
+// let arr=['c','y','a','g']
+//  console.log(arr.sort())
 
 
+
+// let arr=[1,2,3,4,5,6];
+// let a2=arr.some(item=>item>6);
+// console.log(a2);
+
+// let a3=arr.every(item=>item>=1);
+
+
+// console.log(a3);
+
+// let arr=[1,2,2,3,3,4,5,6,7];
+// let unique=[...new Set(arr)];
+// console.log(unique);
+// console.log(arr);
+
+// let arra=new Array(5);
+// console.log(arra.length)
+
+// let a1 = [1, 2];
+// let a2 = [1, 2];
+// console.log(a1 == a2);
+// for (let item of a1) {
+//     for (let item2 of a2) {
+//         if (item == item2) {
+
+//             console.log(true);
+//         }
+//         else {
+//             console.log(false);
+
+
+//         }
+//     }
+// }
+
+
+// let arr=[1,2,3,4,5];
+// let reverse=[];
+// for(let index=arr.length-1;index>=0;index--){
+// //   console.log(arr[index])
+//     // reverse.push(arr[index]);
+// }
+// console.log(reverse);
+
+// let arr=[1,2,3,4,5];
+// let reverse=[];
+// for(let index=arr.length-1;index>=0;index--){
+//     for(let i=0;i<index+1;i++){
+//         reverse[i]=arr[index];
+//     }
+//     }
+//     console.log(reverse);
+
+// let arr = [6, 7, 1, 9, 3, 4, 5];
+// let temp;
+// for (let i = 0; i < arr.length; i++) {
+//         for (j = i+1; j < arr.length; j++) {
+//         if (arr[i] > arr[j]) {
+//             temp = arr[i];
+//             arr[i] = arr[j];
+//             arr[j] = temp;
+//         }
+
+//     }
+// }
+
+
+// for (let i = 0; i < arr.length; i++) {
+//         for (j = i+1; j < arr.length; j++) {
+//         if (arr[i] > arr[j]) {
+//           console.log(arr[i]);
+//         }
+
+//     }
+// }
+// console.log(arr)
+
+
+
+let arr = [6, 7, 1, 9, 3, 4, 5];
+
+if (arr.length < 2) {
+    console.log("Array must have at least two elements.");
+} else {
+    let largest = -Infinity;
+    let secondLargest = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            secondLargest = largest; // Update second largest
+            largest = arr[i]; // Update largest
+        } else if (arr[i] > secondLargest && arr[i] !== largest) {
+            secondLargest = arr[i]; // Update second largest only if it's not equal to the largest
+        }
+    }
+
+    if (secondLargest === -Infinity) {
+        console.log("No second largest number exists.");
+    } else {
+        console.log("The second largest number is:", secondLargest);
+    }
+}
