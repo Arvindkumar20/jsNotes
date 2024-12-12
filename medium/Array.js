@@ -240,25 +240,96 @@
 
 
 
-let arr = [6, 7, 1, 9, 3, 4, 5];
+// let arr = [6, 7, 1, 9, 3, 4, 5];
 
-if (arr.length < 2) {
-    console.log("Array must have at least two elements.");
-} else {
-    let largest = -Infinity;
-    let secondLargest = -Infinity;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > largest) {
-            secondLargest = largest; // Update second largest
-            largest = arr[i]; // Update largest
-        } else if (arr[i] > secondLargest && arr[i] !== largest) {
-            secondLargest = arr[i]; // Update second largest only if it's not equal to the largest
+// if (arr.length < 2) {
+//     console.log("Array must have at least two elements.");
+// } else {
+//     let largest = -Infinity;
+//     let secondLargest = -Infinity;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > largest) {
+//             secondLargest = largest; // Update second largest
+//             largest = arr[i]; // Update largest
+//         } else if (arr[i] > secondLargest && arr[i] !== largest) {
+//             secondLargest = arr[i]; // Update second largest only if it's not equal to the largest
+//         }
+//     }
+
+//     if (secondLargest === -Infinity) {
+//         console.log("No second largest number exists.");
+//     } else {
+//         console.log("The second largest number is:", secondLargest);
+//     }
+// }
+
+
+
+
+
+// second largest number 
+
+// let l=-Infinity
+// let sl=-Infinity
+// let array=[1,6,30,56,8];
+// for(let i=0;i<array.length;i++){
+//     if(array[i]>l){
+//         sl=l;
+//         l=array[i];
+//     }
+// }
+// console.log("second largest number "+ sl);
+// console.log(l)
+
+
+// check second array is subset of first array 
+// check that given array is subset of an other array 
+// let arr=[1,2,3,4,5,6,7];
+// let arr2=[1,2,3,0,4,5,6];
+// if(arr.length<arr2.length){
+//     console.log("second array is not subset of first array");
+// }
+// let isSubset=arr2.every(element=>arr.includes(element));
+// if(isSubset){
+//     console.log("second array is subset of first array");
+// }
+// else{
+//     console.log("second array is not subset of first array")
+// }
+
+
+// Merge and sort two arrays without using built-in methods.
+// function addItem(arr,arr2){
+//     for (let i = 0; i < arr.length; i++) {
+//         arr2.push(arr1[i]);
+//     }
+//     return arr2;
+// }
+
+let arr1 = [1, 26, 5, 7, 9];
+let arr2 = [0, 206, 50, 71, 92];
+let sorted = [];
+addItem(arr1,sorted);
+addItem(arr2,sorted);
+
+// for (let i = 0; i < arr1.length; i++) {
+//     sorted.push(arr1[i]);
+// }
+// for (let i = 0; i < arr2.length; i++) {
+//     sorted.push(arr2[i]);
+// }
+
+console.log("unsorted   "+sorted);
+
+let temp;
+for (let i = 0; i < sorted.length; i++) {
+    for (let j = i + 1; j < sorted.length; j++) {
+        if (sorted[i] > sorted[j]) {
+            temp = sorted[i];
+            sorted[i] = sorted[j];
+            sorted[j] = temp;
         }
     }
-
-    if (secondLargest === -Infinity) {
-        console.log("No second largest number exists.");
-    } else {
-        console.log("The second largest number is:", secondLargest);
-    }
 }
+console.log("sorted   "+sorted);
+
