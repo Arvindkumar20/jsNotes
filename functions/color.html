@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style</title>
+</head>
+
+<body>
+    <h1 id="name">name</h1>
+   
+    <!-- <p id="script">script </p> -->
+    <!-- buttons -->
+    <!-- <button type="button" onclick="document.getElementById('name').style.color='red'">red</button>
+
+    <button type="button" onclick="document.getElementById('name').style.color='green'">green</button>
+
+    <button type="button" onclick="document.getElementById('name').style.color='blue'">blue</button> 
+
+    <button type="button" onclick="document.getElementById('name').style.color='yellow'">yellow</button> -->
+
+    
+    <!-- <button id="click" type="button">click</button> -->
+
+    <button type="button" id="red">red</button>
+    <button type="button" id="green">green</button>
+    <button type="button" id="blue">blue</button>
+    <button type="button" id="yellow">yellow</button>
+
+
+    <script>
+        //button 1
+        let btn1=document.getElementById('red');
+
+        let name= document.getElementById('name');
+btn1.addEventListener('click',()=>{
+   name.style.color='red';
+  name.innerHTML='red';
+});
+        //button 2
+
+let btn2=document.getElementById('green');
+btn2.addEventListener('click',()=>{
+   name.style.color='green';
+   name.innerHTML='green';
+});
+        //button 3
+        let btn3=document.getElementById('yellow');
+btn2.addEventListener('click',()=>{
+   name.style.color='yellow';
+   name.innerHTML='yellow';
+});
+let btn4=document.getElementById('yellow');
+btn2.addEventListener('click',()=>{
+   name.style.color='yellow';
+   name.innerHTML='yellow';
+});
+
+    </script>
+<script>
+    document.getElementById('name').style.background='black';
+</script>
+
+</body>
+
+</html>

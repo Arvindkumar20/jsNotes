@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mode </title>
+</head>
+<style>
+    button{
+        width: 50px;
+        height: 30px;
+    }
+</style>
+<body >
+    <a href='https://x.com/Arvind827502'>twitter</a>
+    
+    <button id="mode">light mode</button>
+    <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+<script>
+    let modeButton=document.getElementById('mode');
+    modeButton.addEventListener('click',(e)=>{
+    if(modeButton.innerHTML==='light mode')
+    {
+        document.body.style.backgroundColor='black';
+        document.body.style.color='white';
+        modeButton.innerHTML='Dark mode';
+    }
+    else{
+        document.body.style.backgroundColor='white';
+        document.body.style.color='black';
+        modeButton.innerText='light mode'
+    }
+    });
+</script>
+</body>
+</html>
