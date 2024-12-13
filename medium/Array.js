@@ -289,7 +289,7 @@
 // if(arr.length<arr2.length){
 //     console.log("second array is not subset of first array");
 // }
-// let isSubset=arr2.every(element=>arr.includes(element));
+let isSubset=arr2.every(element=>arr.includes(element));
 // if(isSubset){
 //     console.log("second array is subset of first array");
 // }
@@ -309,15 +309,15 @@
 let arr1 = [1, 26, 5, 7, 9];
 let arr2 = [0, 206, 50, 71, 92];
 let sorted = [];
-addItem(arr1,sorted);
-addItem(arr2,sorted);
+// addItem(arr1,sorted);
+// addItem(arr2,sorted);
 
-// for (let i = 0; i < arr1.length; i++) {
-//     sorted.push(arr1[i]);
-// }
-// for (let i = 0; i < arr2.length; i++) {
-//     sorted.push(arr2[i]);
-// }
+for (let i = 0; i < arr1.length; i++) {
+    sorted.push(arr1[i]);
+}
+for (let i = 0; i < arr2.length; i++) {
+    sorted.push(arr2[i]);
+}
 
 console.log("unsorted   "+sorted);
 
