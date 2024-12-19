@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    .choices {
+      margin: 20px 0;
+    }
+    .choice {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .choice:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock, Paper, Scissors</h1>
+  <div class="choices">
+    <button class="choice" onclick="playGame('rock')">Rock</button>
+    <button class="choice" onclick="playGame('paper')">Paper</button>
+    <button class="choice" onclick="playGame('scissors')">Scissors</button>
+  </div>
+  <div class="result" id="result"></div>
+
+  <script>
+    function playGame(playerChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      let result = '';
+
+      if (playerChoice === computerChoice) {
+        document.getElementById('result').style.color='black';
+
+        result = `It's a tie! Both chose ${playerChoice}.`;
+      } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        document.getElementById('result').style.color='green';
+        result = `You win! ${playerChoice} beats ${computerChoice}.`;
+      } else {
+        document.getElementById('result').style.color='red';
+
+        result = `You lose! ${computerChoice} beats ${playerChoice}.`;
+
+        
+      }
+
+      document.getElementById('result').innerText = result;
+    }
+  </script>
+</body>
+</html>

@@ -79,7 +79,7 @@
 //     while (num > 0) {
 //         remainder = num % 10;
 //         sum = sum * 10 + remainder;
-//         num = Math.floor(num / 10);
+//         num = Math.floor(num / 10);123/10=12.3=>12
 //     }
 //     if (originalNum === sum) {
 //         return true;
