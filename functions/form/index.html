@@ -7,13 +7,19 @@
 </head>
 <body>
     <form>
-        Username: <input type="text" id="username" name="username"><br>
+        <!-- document.queryselector('input'); -->
+        <!-- document.queryselector('#username'); -->
+        <!-- document.queryselector('.username'); -->
+       <!-- arr= document.queryselectorAll('input'); -->
+       <!-- arr= document.queryselectorAll('.userName'); -->
+
+        Username: <input type="text" id="username" name="username" onchange="((e)=>{console.log(value)})()"><br>
         Password: <input type="password" id="password" name="password">
         <p id="errorPassword"></p>
-        
         Email:<input type="email" id="email" name="email" placeholder="Email...">
         <p id="errorEmail"></p>
         <button type="submit" id="submit">Submit</button>
+        <button type="reset" id="submit">reset</button>
     </form>
     <script src="validate.js"></script>
 </body>

@@ -51,12 +51,10 @@
     function playGame(playerChoice) {
       const choices = ['rock', 'paper', 'scissors'];
       const computerChoice = choices[Math.floor(Math.random() * 3)];
-
       let result = '';
 
       if (playerChoice === computerChoice) {
         document.getElementById('result').style.color='black';
-
         result = `It's a tie! Both chose ${playerChoice}.`;
       } else if (
         (playerChoice === 'rock' && computerChoice === 'scissors') ||
@@ -67,10 +65,7 @@
         result = `You win! ${playerChoice} beats ${computerChoice}.`;
       } else {
         document.getElementById('result').style.color='red';
-
-        result = `You lose! ${computerChoice} beats ${playerChoice}.`;
-
-        
+        result = `You lose! ${computerChoice} beats ${playerChoice}.`;        
       }
 
       document.getElementById('result').innerText = result;

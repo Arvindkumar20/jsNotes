@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom (Document Object Model)</title>
+</head>
+<style>
+    .newClass {
+        color: red;
+        background: black;
+    }
+   
+</style>
+
+<body>
+    <button class="toggle" id="id">Raj</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus alias vero eos nostrum aperiam iste. Ex
+        consequatur aliquam impedit odit illo quis minus odio debitis ab, enim velit, ipsam earum!</p>
+    <button class="toggle">Raj</button>
+    <button class="toggle">Raj</button>
+    <button class="toggle">Raj</button>
+    <script>
+        // class toggle
+        // const toggle = document.getElementsByClassName('toggle');
+        // Array.from(toggle).forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         item.classList.toggle('active');
+        //         item.style.color = 'red';
+        //     });
+        // });
+
+        // tag name
+        // const tag = document.getElementsByTagName('button')[0];
+        // console.log(tag);
+        // console.log(typeof tag);
+        // tag.addEventListener('click', () => {
+        //     tag.classList.toggle('active');
+        //     tag.style.color = 'red';
+        // });
+        // Array.from(tag).forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         item.classList.toggle('active');
+        //         item.style.color = 'red';
+        //     });
+        // });
+        // querySelector
+        // const query = document.querySelector('#id');
+        // // const query = document.querySelector('button');
+        // // const query = document.querySelector('.toggle');
+        // query.addEventListener('click', () => {
+        //     query.classList.toggle('active');
+        //     query.style.color = 'red';
+        // });
+
+        // querySelectorAll
+        // const queryAll = document.querySelectorAll('.toggle');
+        // const queryAll = document.querySelectorAll('button');
+        // Array.from(queryAll).forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         item.classList.toggle('active');
+        //         // item.style.color = 'red';
+        //         if (item.classList.contains('newClass')) {
+        //             item.classList.remove('newClass');
+        //         } else {
+        //             item.classList.add('newClass');
+        //         }
+
+        //     });
+        // });
+
+        const queryAll = document.querySelectorAll('button');
+        const para = document.querySelector('p');
+        Array.from(queryAll).forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                if (item.classList.contains('newClass')) {
+                    item.classList.remove('newClass');
+                   document.body.style.background = 'black';
+                   para.style.color = 'white';
+                   para.textContent = 'dark mode';
+                } else {
+                    item.classList.add('newClass');
+                    document.body.style.background = 'white';
+                    para.style.color = 'black';
+                    para.textContent = 'light mode';
+                }
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>
